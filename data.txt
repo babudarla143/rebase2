@@ -1,4 +1,3 @@
 this is bda lab
 this lab is pig installation
-we need to count the no of word repetition using pig
 here am going to expcute rebase experment
