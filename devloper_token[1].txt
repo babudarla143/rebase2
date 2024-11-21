@@ -1,0 +1,35 @@
+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
+
+git remote set-url origin https://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@github.com/<username>/repo
+
+babudarla143/rebase2
+
+git remote set-url origin https://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@github.com/babudarla143/rebase2
+
+maven and java path:
+export JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto
+export M2_HOME=/opt/maven
+export M2=/opt/maven/bin
+export PATH=$PATH:$M2
+
+<role rolename="manager-gui"/>
+<role rolename="manager-script"/>
+<role rolename="manager-jmx"/>
+<role rolename="manager-status"/>
+<user username="admin" password="admin" roles="manager-gui,manager-script,manager-jmx,manager-status"/>
+<user username="developer" password="developer" roles="manager-script"/>
+<user username="tomcat" password="s3cret" roles="manager-gui"/>
+
+
+mvn archetype:generate -DgroupId=com.example -DartifactId=sample-webapp -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+mvn package
+
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
+sudo yum install fontconfig java-17-openjdk 
+sudo yum install Jenkins -y 
+sudo systemctl start jenkins
+sudo systemctl enable Jenkins 
